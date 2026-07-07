@@ -1,27 +1,12 @@
 export const heroData = {
-  badge: " Available for Freelance",
+  badge: "🚀 Available for Freelance",
 
-  title: "Building Modern Websites That Grow Your Business.",
+  title: "Building Modern Websites That Grow Businesses.",
 
   description:
-    "I build modern, responsive and SEO-optimized websites that help businesses establish a strong online presence and convert visitors into customers.",
+    "I design and develop modern, responsive and SEO-friendly websites using Next.js, React and TypeScript. From landing pages to AI-powered web applications, I build fast, scalable and user-focused digital experiences.",
 
-  primaryButton: "Hire Me",
+  primaryButton: "Start Your Project",
 
-  secondaryButton: "View Portfolio",
-
-  stats: [
-    {
-      value: "10+",
-      label: "Projects",
-    },
-    {
-      value: "100%",
-      label: "Responsive",
-    },
-    {
-      value: "SEO",
-      label: "Optimized",
-    },
-  ],
+  secondaryButton: "View My Work",
 };

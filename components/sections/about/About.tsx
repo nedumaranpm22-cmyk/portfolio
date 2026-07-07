@@ -1,5 +1,5 @@
-import AboutContent from "./about/AboutContent";
-import AboutCards from "./about/AboutCards";
+import AboutContent from "./AboutContent";
+import AboutCards from "./AboutCards";
 
 export default function About() {
   return (

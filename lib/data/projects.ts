@@ -13,7 +13,7 @@ export const featuredProject = {
     "Tailwind CSS",
   ],
 
-  image: "/projects/student-dashboard.png",
+  image: "/projects/student-dashboard.webp",
 
   github: "#",
 
@@ -32,7 +32,7 @@ export const projects = [
       "TensorFlow",
     ],
 
-    image: "/projects/agriscout.png",
+    image: "/projects/agriscout.webp",
   },
 
   {
@@ -46,7 +46,7 @@ export const projects = [
       "AI",
     ],
 
-    image: "/projects/urban-heat.png",
+    image: "/projects/urban-heat.webp",
   },
 
   {
@@ -60,6 +60,6 @@ export const projects = [
       "Tailwind",
     ],
 
-    image: "/projects/portfolio.png",
+    image: "/projects/portfolio.webp",
   },
 ];

@@ -1,24 +1,33 @@
+import Image from "next/image";
 import { featuredProject } from "@/lib/data/projects";
 import { Button } from "@/components/ui/button";
 import { GitBranch, ExternalLink } from "lucide-react";
-import Image from "next/image";
 
 export default function FeaturedProject() {
   return (
-    <div className="mb-16 overflow-hidden rounded-[36px] bg-white shadow-xl">
+    <div className="mb-16 overflow-hidden rounded-[36px] bg-white shadow-xl transition-all duration-300 hover:shadow-2xl">
+
       <div className="grid lg:grid-cols-2">
 
-        {/* Project Preview */}
-        <div className="flex min-h-[420px] items-center justify-center bg-gray-100">
-          <span className="text-gray-400">
-            Project Screenshot
-          </span>
+        {/* Left Side - Project Image */}
+
+        <div className="relative min-h-[420px] overflow-hidden bg-gray-100">
+
+          <Image
+            src={featuredProject.image}
+            alt={featuredProject.title}
+            fill
+            priority
+            className="object-cover transition-transform duration-500 hover:scale-105"
+          />
+
         </div>
 
-        {/* Content */}
-        <div className="p-10">
+        {/* Right Side */}
 
-          <span className="inline-flex rounded-full bg-orange-100 px-4 py-2 text-sm font-medium text-[#FF6B4A]">
+        <div className="flex flex-col justify-center p-10">
+
+          <span className="inline-flex w-fit rounded-full bg-orange-100 px-4 py-2 text-sm font-medium text-[#FF6B4A]">
             ⭐ Featured Project
           </span>
 
@@ -26,7 +35,7 @@ export default function FeaturedProject() {
             {featuredProject.title}
           </h2>
 
-          <p className="mt-2 text-sm font-medium text-[#FF6B4A]">
+          <p className="mt-2 text-sm font-semibold uppercase tracking-wide text-[#FF6B4A]">
             {featuredProject.category}
           </p>
 
@@ -34,30 +43,42 @@ export default function FeaturedProject() {
             {featuredProject.description}
           </p>
 
-          <div className="mt-8 flex flex-wrap gap-2">
+          {/* Technologies */}
+
+          <div className="mt-8 flex flex-wrap gap-3">
+
             {featuredProject.technologies.map((tech) => (
               <span
                 key={tech}
-                className="rounded-full bg-orange-50 px-3 py-1 text-sm font-medium text-[#FF6B4A]"
+                className="rounded-full bg-orange-50 px-4 py-2 text-sm font-medium text-[#FF6B4A]"
               >
                 {tech}
               </span>
             ))}
+
           </div>
+
+          {/* Buttons */}
 
           <div className="mt-10 flex flex-wrap gap-4">
 
             <Button type="button">
+
               <GitBranch className="mr-2 h-4 w-4" />
+
               GitHub
+
             </Button>
 
             <Button
               type="button"
               variant="outline"
             >
+
               <ExternalLink className="mr-2 h-4 w-4" />
+
               Live Demo
+
             </Button>
 
           </div>
@@ -65,6 +86,7 @@ export default function FeaturedProject() {
         </div>
 
       </div>
+
     </div>
   );
 }

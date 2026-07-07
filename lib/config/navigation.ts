@@ -12,12 +12,8 @@ export const navigation = [
     href: "#services",
   },
   {
-    label: "Portfolio",
-    href: "#portfolio",
-  },
-  {
-    label: "Pricing",
-    href: "#pricing",
+    label: "Projects",
+    href: "#projects",
   },
   {
     label: "Contact",
