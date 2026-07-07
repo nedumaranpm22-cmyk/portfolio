@@ -1,38 +1,66 @@
-export const featuredProject = {
-  title: "Smart Student Hub",
-
-  category: "Web Application",
-
-  description:
-    "A centralized student activity management platform that helps institutions manage certificates, achievements, and academic records through a responsive dashboard.",
-
-  technologies: [
-    "Next.js",
-    "React",
-    "TypeScript",
-    "Tailwind CSS",
-  ],
-
-  image: "/projects/student-dashboard.webp",
-
-  github: "#",
-
-  demo: "#",
-};
-
 export const projects = [
+  {
+    title: "Professional Business Website",
+
+    category: "Business Website",
+
+    description:
+      "A polished service-business website concept built around clear messaging, responsive sections, SEO structure, and conversion-focused contact paths.",
+
+    impact: "Helps a business present services professionally and turn visitors into leads.",
+
+    image: "/projects/portfolio.webp",
+
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "SEO",
+    ],
+
+    github: "#",
+
+    demo: "#",
+
+    highlights: [
+      "Service-focused layout",
+      "Lead-ready contact flow",
+      "Professional brand sections",
+    ],
+
+    featured: false,
+  },
+
   {
     title: "AgriScout",
 
-    category: "AI Project",
+    category: "AI Agriculture",
+
+    description:
+      "AI-powered crop disease detection platform using deep learning with multilingual support for farmers.",
+
+    impact: "Helps farmers identify crop issues earlier with AI-assisted image analysis.",
+
+    image: "/projects/agriscout.webp",
 
     technologies: [
       "Python",
       "Flask",
       "TensorFlow",
+      "OpenCV",
     ],
 
-    image: "/projects/agriscout.webp",
+    github: "#",
+
+    demo: "#",
+
+    highlights: [
+      "Disease detection",
+      "Multilingual flow",
+      "Farmer-first interface",
+    ],
+
+    featured: false,
   },
 
   {
@@ -40,26 +68,31 @@ export const projects = [
 
     category: "Machine Learning",
 
+    description:
+      "AI-driven urban heat island analysis using satellite imagery and machine learning models.",
+
+    impact: "Turns geospatial data into useful heat-risk insights for urban planning.",
+
+    image: "/projects/urban-heat.webp",
+
     technologies: [
       "Python",
       "GIS",
-      "AI",
+      "Machine Learning",
+      "Remote Sensing",
     ],
 
-    image: "/projects/urban-heat.webp",
-  },
+    github: "#",
 
-  {
-    title: "Portfolio Website",
+    demo: "#",
 
-    category: "Frontend",
-
-    technologies: [
-      "Next.js",
-      "TypeScript",
-      "Tailwind",
+    highlights: [
+      "Satellite analysis",
+      "ML prediction",
+      "GIS workflow",
     ],
 
-    image: "/projects/portfolio.webp",
+    featured: false,
   },
+
 ];

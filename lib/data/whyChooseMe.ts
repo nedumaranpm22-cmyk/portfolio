@@ -2,37 +2,58 @@ export const whyChooseMe = [
   {
     title: "Responsive Design",
     description:
-      "Every website is optimized for desktop, tablet and mobile devices.",
+      "Layouts are planned mobile-first, then refined for tablet and desktop so every screen feels intentional.",
+    result: "All-screen polish",
     icon: "Smartphone",
   },
   {
     title: "SEO Optimized",
     description:
-      "Built following modern SEO practices for better search visibility.",
+      "Clean metadata, semantic structure and fast pages help your site become easier to discover.",
+    result: "Search-ready builds",
     icon: "Search",
   },
   {
     title: "Fast Performance",
     description:
-      "Optimized code, images and assets for lightning-fast loading speed.",
+      "I keep interfaces lean, optimize assets and avoid unnecessary complexity that slows users down.",
+    result: "Speed-first delivery",
     icon: "Zap",
   },
   {
     title: "Modern UI",
     description:
-      "Clean, attractive and user-friendly interfaces designed for conversions.",
+      "Visual systems are built around hierarchy, clarity and conversion instead of decorative noise.",
+    result: "Premium product feel",
     icon: "Palette",
   },
   {
     title: "Clean Code",
     description:
-      "Scalable and maintainable code following industry best practices.",
+      "Components, data and styles are organized so the project stays maintainable after launch.",
+    result: "Easy to extend",
     icon: "Code2",
   },
   {
     title: "Reliable Support",
     description:
-      "Clear communication and post-delivery assistance whenever needed.",
+      "You get clear communication, practical handoff and support for fixes or improvements after delivery.",
+    result: "Launch confidence",
     icon: "Handshake",
+  },
+];
+
+export const whyChooseMeStats = [
+  {
+    value: "100%",
+    label: "Responsive delivery",
+  },
+  {
+    value: "15+",
+    label: "Projects shipped",
+  },
+  {
+    value: "20+",
+    label: "Tools mastered",
   },
 ];

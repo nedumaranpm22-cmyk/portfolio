@@ -1,13 +1,35 @@
 export default function HeroBackground() {
   return (
     <>
-      <div className="absolute inset-0 -z-30 bg-[#FFF9F6]" />
+      {/* Mesh */}
 
-      <div className="absolute left-1/2 top-0 -z-20 h-[700px] w-[700px] -translate-x-1/2 rounded-full bg-orange-200/30 blur-[150px]" />
+      <div className="absolute inset-0 mesh-bg" />
 
-      <div className="absolute bottom-0 right-0 -z-20 h-[550px] w-[550px] rounded-full bg-sky-200/20 blur-[170px]" />
+      {/* Glow 1 */}
 
-      <div className="absolute left-0 bottom-0 -z-20 h-[450px] w-[450px] rounded-full bg-orange-100/40 blur-[150px]" />
+      <div className="absolute -left-44 top-0 h-[650px] w-[650px] rounded-full bg-orange-300/20 blur-[180px]" />
+
+      {/* Glow 2 */}
+
+      <div className="absolute right-0 top-0 h-[650px] w-[650px] rounded-full bg-orange-100/30 blur-[180px]" />
+
+      {/* Bottom */}
+
+      <div className="absolute bottom-0 left-1/2 h-[450px] w-[450px] -translate-x-1/2 rounded-full bg-white/50 blur-[150px]" />
+
+      {/* Grid */}
+
+      <div
+        className="
+          absolute
+          inset-0
+          opacity-[0.04]
+
+          [background-image:linear-gradient(#000_1px,transparent_1px),linear-gradient(90deg,#000_1px,transparent_1px)]
+
+          [background-size:45px_45px]
+        "
+      />
     </>
   );
 }

@@ -1,66 +1,76 @@
+import {
+  Code2,
+  GraduationCap,
+  Rocket,
+} from "lucide-react";
+
+import { aboutData } from "@/lib/data/about";
+
+const icons = {
+  Code2,
+  GraduationCap,
+  Rocket,
+};
+
 export default function AboutCards() {
   return (
-    <div className="grid gap-6">
+    <div className="grid gap-5 lg:pt-10">
+      {aboutData.cards.map((card, index) => {
+        const Icon = icons[card.icon as keyof typeof icons];
+        const featured = index === 1;
 
-      {/* Education */}
-      <div className="rounded-3xl bg-white p-8 shadow-xl">
+        return (
+          <article
+            key={card.title}
+            className={`group relative overflow-hidden rounded-[28px] border p-6 shadow-[0_20px_60px_rgba(15,23,42,.08)] transition-all duration-300 hover:-translate-y-1 sm:p-7 ${
+              featured
+                ? "border-transparent bg-[#111827] text-white"
+                : "border-orange-100 bg-white/85 text-gray-900 backdrop-blur"
+            }`}
+          >
+            <div className={`absolute right-6 top-6 text-6xl font-black leading-none ${
+              featured ? "text-white/5" : "text-orange-50"
+            }`}>
+              {String(index + 1).padStart(2, "0")}
+            </div>
 
-        <span className="text-sm font-semibold text-[#FF6B4A]">
-          EDUCATION
-        </span>
+            <div className={`relative flex h-14 w-14 items-center justify-center rounded-2xl ${
+              featured
+                ? "bg-[#FF6B4A] text-white"
+                : "bg-orange-50 text-[#FF6B4A] ring-1 ring-orange-100"
+            }`}>
+              <Icon
+                size={28}
+                aria-hidden="true"
+              />
+            </div>
 
-        <h3 className="mt-4 text-2xl font-bold text-gray-900">
-          B.Tech Information Technology
-        </h3>
+            <span className={`relative mt-6 block text-sm font-bold uppercase ${
+              featured ? "text-orange-200" : "text-[#FF6B4A]"
+            }`}>
+              {card.label}
+            </span>
 
-        <p className="mt-2 text-gray-600">
-          A.V.C College of Engineering
-        </p>
+            <h3 className="relative mt-3 text-2xl font-bold">
+              {card.title}
+            </h3>
 
-        <p className="mt-1 text-sm text-gray-500">
-          Anna University
-        </p>
+            <p className={`relative mt-3 leading-7 ${
+              featured ? "text-slate-300" : "text-gray-600"
+            }`}>
+              {card.description}
+            </p>
 
-      </div>
-
-      {/* Current Focus */}
-      <div className="rounded-3xl bg-[#FF6B4A] p-8 text-white shadow-xl">
-
-        <span className="text-sm font-semibold uppercase tracking-wider">
-          CURRENT FOCUS
-        </span>
-
-        <h3 className="mt-4 text-2xl font-bold">
-          Building Modern Web Applications
-        </h3>
-
-        <p className="mt-4 text-orange-100 leading-7">
-          I'm currently focused on mastering Next.js, React,
-          TypeScript and SEO while building high-performance,
-          responsive websites for businesses and individuals.
-        </p>
-
-      </div>
-
-      {/* Learning */}
-      <div className="rounded-3xl bg-slate-900 p-8 text-white shadow-xl">
-
-        <span className="text-sm font-semibold uppercase tracking-wider text-orange-300">
-          CONTINUOUS LEARNING
-        </span>
-
-        <h3 className="mt-4 text-2xl font-bold">
-          Always Improving
-        </h3>
-
-        <p className="mt-4 text-slate-300 leading-7">
-          Every project helps me learn something new. I actively
-          participate in hackathons, build personal projects and
-          explore modern web technologies to improve my skills.
-        </p>
-
-      </div>
-
+            <p className={`relative mt-5 border-t pt-5 text-sm font-medium leading-6 ${
+              featured
+                ? "border-white/10 text-white"
+                : "border-gray-100 text-gray-800"
+            }`}>
+              {card.detail}
+            </p>
+          </article>
+        );
+      })}
     </div>
   );
 }

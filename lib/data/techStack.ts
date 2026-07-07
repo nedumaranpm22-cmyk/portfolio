@@ -1,6 +1,9 @@
 export const techStack = [
   {
     title: "Frontend",
+    description: "Interfaces, layouts and client-side experiences built for speed and clarity.",
+    icon: "MonitorSmartphone",
+    level: "Primary focus",
     technologies: [
       "Next.js",
       "React",
@@ -13,6 +16,9 @@ export const techStack = [
   },
   {
     title: "Backend",
+    description: "APIs, server logic and integrations that support real product workflows.",
+    icon: "ServerCog",
+    level: "Building depth",
     technologies: [
       "Node.js",
       "Express.js",
@@ -22,6 +28,9 @@ export const techStack = [
   },
   {
     title: "Database",
+    description: "Data layers for prototypes, dashboards and practical full-stack apps.",
+    icon: "Database",
+    level: "Project-ready",
     technologies: [
       "MongoDB",
       "SQLite",
@@ -30,6 +39,9 @@ export const techStack = [
   },
   {
     title: "Tools",
+    description: "Daily development, design, testing and deployment tools for smoother delivery.",
+    icon: "Wrench",
+    level: "Workflow stack",
     technologies: [
       "Git",
       "GitHub",
@@ -39,4 +51,13 @@ export const techStack = [
       "Postman",
     ],
   },
+];
+
+export const coreTech = [
+  "Next.js",
+  "React",
+  "TypeScript",
+  "Tailwind CSS",
+  "Node.js",
+  "Vercel",
 ];

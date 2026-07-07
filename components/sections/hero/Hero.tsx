@@ -1,48 +1,27 @@
-import { heroData } from "@/lib/data/hero";
+import HeroContent from "./HeroContent";
 import BrowserMockup from "./BrowserMockup";
-import HeroActions from "./HeroActions";
-import TrustStrip from "./TrustStrip";
+import HeroBackground from "./HeroBackground";
 
 export default function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-screen overflow-hidden bg-[#FFF8F1] pt-36"
+      className="relative isolate overflow-hidden bg-[#FFF9F5] px-4 pb-16 pt-28 sm:px-6 sm:pt-32 lg:pb-20 lg:pt-36"
     >
-      <div className="absolute left-0 top-20 h-96 w-96 rounded-full bg-orange-100 blur-3xl opacity-60" />
+      <HeroBackground />
 
-      <div className="absolute right-0 top-40 h-[500px] w-[500px] rounded-full bg-orange-50 blur-3xl opacity-70" />
+      <div className="relative mx-auto flex min-h-[calc(100svh-9rem)] max-w-6xl items-center">
+        <div className="grid w-full min-w-0 items-center gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(320px,460px)] lg:gap-12">
 
-      <div className="relative mx-auto grid max-w-7xl items-center gap-16 px-6 py-10 lg:grid-cols-2">
+          <HeroContent />
 
-        <div>
+          <div className="relative flex min-w-0 items-center justify-center lg:justify-end">
 
-          <span className="inline-flex items-center rounded-full border border-orange-200 bg-white px-5 py-2 text-sm font-medium text-orange-600 shadow-sm">
-            {heroData.badge}
-          </span>
+            <BrowserMockup />
 
-          <h1 className="mt-8 text-5xl font-bold leading-tight lg:text-7xl">
-            {heroData.title}
-          </h1>
-
-          <p className="mt-6 max-w-xl text-lg leading-8 text-gray-600">
-            {heroData.description}
-          </p>
-
-          <HeroActions />
-
-          <TrustStrip />
-
+          </div>
         </div>
-
-        <div className="relative flex justify-center lg:justify-end">
-
-          <BrowserMockup />
-
-        </div>
-
       </div>
-
     </section>
   );
 }

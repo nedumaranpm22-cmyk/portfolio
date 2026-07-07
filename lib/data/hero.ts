@@ -1,12 +1,34 @@
 export const heroData = {
   badge: "🚀 Available for Freelance",
 
-  title: "Building Modern Websites That Grow Businesses.",
+  title: "Building Enterprise Digital Experiences",
 
   description:
-    "I design and develop modern, responsive and SEO-friendly websites using Next.js, React and TypeScript. From landing pages to AI-powered web applications, I build fast, scalable and user-focused digital experiences.",
+    "Modern websites, AI applications and scalable full-stack solutions crafted with performance and user experience in mind.",
 
   primaryButton: "Start Your Project",
 
-  secondaryButton: "View My Work",
+  secondaryButton: "Download Resume",
+
+  stats: [
+    {
+      value: "15+",
+      label: "Projects",
+    },
+
+    {
+      value: "20+",
+      label: "Technologies",
+    },
+
+    {
+      value: "2+",
+      label: "Years Learning",
+    },
+
+    {
+      value: "100%",
+      label: "Responsive",
+    },
+  ],
 };

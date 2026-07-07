@@ -1,0 +1,85 @@
+:root {
+  /* Backgrounds */
+  --bg-primary: #fffaf5;
+  --bg-secondary: rgba(255,255,255,.65);
+
+  /* Glass */
+  --glass-bg: rgba(255,255,255,.55);
+  --glass-border: rgba(255,255,255,.35);
+  --glass-blur: blur(28px);
+
+  /* Colors */
+  --primary: #FF6B4A;
+  --primary-light: #FF9B81;
+
+  --text-primary: #111827;
+  --text-secondary: #6B7280;
+
+  /* Shadows */
+  --shadow-soft:
+      0 10px 35px rgba(15,23,42,.08);
+
+  --shadow-medium:
+      0 20px 60px rgba(15,23,42,.12);
+
+  --shadow-large:
+      0 35px 90px rgba(15,23,42,.18);
+
+  /* Radius */
+
+  --radius-xl:28px;
+  --radius-2xl:36px;
+  --radius-pill:999px;
+
+  /* Transition */
+
+  --transition:300ms ease;
+}
+
+.glass {
+
+  background:var(--glass-bg);
+
+  backdrop-filter:var(--glass-blur);
+
+  border:1px solid var(--glass-border);
+
+  box-shadow:var(--shadow-medium);
+
+}
+
+.clay {
+
+  background:white;
+
+  border-radius:28px;
+
+  box-shadow:
+      -10px -10px 25px rgba(255,255,255,.8),
+      10px 10px 30px rgba(15,23,42,.08);
+
+}
+
+.gradient-text{
+
+background:
+linear-gradient(
+90deg,
+#FF6B4A,
+#FF875F
+);
+
+-webkit-background-clip:text;
+
+color:transparent;
+
+}
+
+.mesh-bg{
+
+background:
+radial-gradient(circle at 20% 20%,rgba(255,107,74,.18),transparent 35%),
+radial-gradient(circle at 80% 0%,rgba(255,180,150,.18),transparent 35%),
+radial-gradient(circle at 100% 100%,rgba(255,255,255,.4),transparent 45%);
+
+}

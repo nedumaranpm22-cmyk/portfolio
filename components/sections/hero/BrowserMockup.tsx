@@ -1,143 +1,114 @@
+import GlassCard from "@/components/design-system/GlassCard";
+
 export default function BrowserMockup() {
   return (
-    <div className="relative w-full max-w-[560px]">
+    <GlassCard className="relative w-full max-w-[420px] overflow-hidden rounded-[28px]">
 
-      {/* Glow */}
-      <div className="absolute inset-0 rounded-[40px] bg-orange-200/30 blur-3xl" />
+      <div className="flex items-center justify-between border-b border-white/20 bg-white/40 px-4 py-3">
 
-      {/* Browser */}
-      <div className="relative overflow-hidden rounded-[32px] border border-orange-100 bg-white shadow-[0_30px_80px_rgba(0,0,0,0.12)]">
+        <div className="flex items-center gap-2">
 
-        {/* Browser Header */}
-        <div className="flex items-center justify-between border-b border-gray-100 px-6 py-4">
+          <div className="h-2.5 w-2.5 rounded-full bg-red-400" />
+          <div className="h-2.5 w-2.5 rounded-full bg-yellow-400" />
+          <div className="h-2.5 w-2.5 rounded-full bg-green-400" />
 
-          <div className="flex gap-2">
-            <div className="h-3 w-3 rounded-full bg-red-400" />
-            <div className="h-3 w-3 rounded-full bg-yellow-400" />
-            <div className="h-3 w-3 rounded-full bg-green-400" />
+        </div>
+
+        <div className="h-7 w-32 rounded-full bg-white/80 sm:w-40" />
+
+        <p className="text-xs font-medium text-gray-500">
+          Portfolio
+        </p>
+
+      </div>
+
+      <div className="space-y-4 p-4">
+
+        <div className="grid grid-cols-2 gap-4">
+
+          <div className="rounded-2xl bg-gradient-to-br from-orange-200 to-orange-50 p-4 shadow-lg">
+
+            <p className="text-sm text-gray-500">
+              Projects
+            </p>
+
+            <h2 className="mt-2 text-2xl font-bold">
+              15+
+            </h2>
+
           </div>
 
-          <div className="rounded-full bg-gray-100 px-4 py-1 text-xs text-gray-500">
-            nedudev.dev/dashboard
+          <div className="rounded-2xl bg-gradient-to-br from-sky-200 to-cyan-50 p-4 shadow-lg">
+
+            <p className="text-sm text-gray-500">
+              Tech
+            </p>
+
+            <h2 className="mt-2 text-2xl font-bold">
+              20+
+            </h2>
+
           </div>
 
         </div>
 
-        <div className="grid grid-cols-[80px_1fr]">
+        <div className="rounded-2xl bg-white p-4 shadow-lg">
 
-          {/* Sidebar */}
-          <div className="border-r border-gray-100 bg-gray-50 p-5">
+          <div className="mb-5 flex h-32 items-end justify-between">
 
-            <div className="mb-8 h-10 w-10 rounded-xl bg-[#FF6B4A]" />
-
-            <div className="space-y-4">
-
-              <div className="h-3 rounded bg-orange-200" />
-              <div className="h-3 rounded bg-gray-200" />
-              <div className="h-3 rounded bg-gray-200" />
-              <div className="h-3 rounded bg-gray-200" />
-              <div className="h-3 rounded bg-gray-200" />
-
-            </div>
+            <div className="h-12 w-4 rounded-full bg-orange-300" />
+            <div className="h-20 w-4 rounded-full bg-orange-500" />
+            <div className="h-14 w-4 rounded-full bg-orange-200" />
+            <div className="h-28 w-4 rounded-full bg-orange-600" />
+            <div className="h-16 w-4 rounded-full bg-orange-400" />
+            <div className="h-24 w-4 rounded-full bg-orange-300" />
+            <div className="h-32 w-4 rounded-full bg-orange-500" />
 
           </div>
 
-          {/* Main */}
-          <div className="p-6">
+          <div className="h-2 rounded-full bg-gray-200" />
 
-            <div className="mb-8">
+        </div>
 
-              <h3 className="text-xl font-bold">
-                Dashboard
-              </h3>
+        <div className="rounded-2xl bg-white p-4 shadow-lg">
 
-              <p className="text-sm text-gray-500">
-                Welcome back 👋
-              </p>
+          <div className="mb-4 flex items-center justify-between">
 
-            </div>
+            <h3 className="font-semibold">
+              Recent Projects
+            </h3>
 
-            {/* Stats */}
-
-            <div className="grid grid-cols-2 gap-4">
-
-              <div className="rounded-2xl bg-orange-50 p-5">
-
-                <p className="text-sm text-gray-500">
-                  Projects
-                </p>
-
-                <h4 className="mt-2 text-3xl font-bold">
-                  03
-                </h4>
-
-              </div>
-
-              <div className="rounded-2xl bg-sky-50 p-5">
-
-                <p className="text-sm text-gray-500">
-                  Technologies
-                </p>
-
-                <h4 className="mt-2 text-3xl font-bold">
-                  15+
-                </h4>
-
-              </div>
-
-            </div>
-
-            {/* Chart */}
-
-            <div className="mt-6 rounded-2xl bg-gray-50 p-5">
-
-              <div className="mb-5 flex items-end gap-3">
-
-                <div className="h-14 w-6 rounded bg-orange-200" />
-                <div className="h-24 w-6 rounded bg-orange-300" />
-                <div className="h-20 w-6 rounded bg-orange-400" />
-                <div className="h-32 w-6 rounded bg-[#FF6B4A]" />
-                <div className="h-16 w-6 rounded bg-orange-300" />
-                <div className="h-28 w-6 rounded bg-orange-500" />
-
-              </div>
-
-              <div className="h-2 rounded-full bg-gray-200" />
-
-            </div>
-
-            {/* Projects */}
-
-            <div className="mt-6 space-y-3">
-
-              {[
-                "AgriScout",
-                "Smart Student Hub",
-                "Urban Heat AI",
-              ].map((project) => (
-                <div
-                  key={project}
-                  className="flex items-center justify-between rounded-xl border border-gray-100 p-4 transition hover:shadow-md"
-                >
-                  <span className="font-medium">
-                    {project}
-                  </span>
-
-                  <span className="rounded-full bg-green-100 px-3 py-1 text-xs text-green-700">
-                    Completed
-                  </span>
-
-                </div>
-              ))}
-
-            </div>
+            <span className="rounded-full bg-green-100 px-3 py-1 text-xs text-green-600">
+              Active
+            </span>
 
           </div>
+
+          {[
+            "AgriScout",
+            "Business Website",
+            "Urban Heat AI",
+          ].map((project) => (
+            <div
+              key={project}
+              className="mb-3 flex items-center justify-between rounded-xl bg-gray-50 px-4 py-3 last:mb-0"
+            >
+
+              <span className="font-medium text-gray-700">
+                {project}
+              </span>
+
+              <span className="text-xs text-green-500">
+                Completed
+              </span>
+
+            </div>
+          ))}
 
         </div>
 
       </div>
 
-    </div>
+    </GlassCard>
   );
 }
